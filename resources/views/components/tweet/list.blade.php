@@ -1,0 +1,22 @@
+@props([
+    'tweets' => []
+])
+<link rel="stylesheet" href="{{ asset('css/list.css') }}"> 
+<div class="list">
+    <ul>
+        @foreach($tweets as $tweet)
+            <li>
+                <div>    
+                    <span>
+                        {{ $tweet->user->name }}
+                    </span>
+                    <p>{!! nl2br(e($tweet->content)) !!}</p>
+                    <x-tweet.images :images="$tweet->images"></x-tweet.images>
+                </div>    
+                <div>
+                    <x-tweet.options :tweetId="$tweet->id" :userId="$tweet->user_id"></x-tweet.options>
+                </div>
+            </li>
+        @endforeach    
+    </ul>
+</div>    
