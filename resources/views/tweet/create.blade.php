@@ -10,7 +10,8 @@
                     border-color: #e2e8f0; padding: 0.5rem; border-radius: 0.375rem;"
                     placeholder="どんなことがありましたか？出来事や感じたとこを書いてみましょう。">
                 </textarea>
-            </div>    
+            </div> 
+            <x-tweet.form.image></x-tweet.form.image>   
             @error('tweet')
             <p style="color: red;">{{ $message }}</p>
             @enderror 
