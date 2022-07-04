@@ -10,6 +10,6 @@ class CreateImageController extends Controller
 {
     public function store(CreateRequest $request) 
     {
-        $img=$request->imgpath->store('image'); 
+        $img=$request->images->store('image'); 
     }
 }

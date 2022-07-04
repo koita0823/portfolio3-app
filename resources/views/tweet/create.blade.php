@@ -15,7 +15,7 @@
             @error('tweet')
             <p style="color: red;">{{ $message }}</p>
             @enderror 
-            <input type="file" name="imgpath">
+            <input type="file" name="imgPath">
             <x-element.button>投稿</x-element.button>
         </form> 
     </x-layout.single>      
