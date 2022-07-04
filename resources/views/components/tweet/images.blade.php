@@ -20,3 +20,6 @@
     </div>
 </div>    
 @endif
+
+@once 
+    <div x-data="{ imgModal :false, imgModalSrc : '' }"></div>
