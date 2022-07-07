@@ -22,4 +22,16 @@
 @endif
 
 @once 
-    <div x-data="{ imgModal :false, imgModalSrc : '' }"></div>
+    <div x-data="{ imgModal :false, imgModalSrc : '' }">
+        <div class="modal1" @img-modal.window="imgModal = true; imgModalSrc = $event.detail.imgModalSrc;"
+            x-cloak 
+            x-show="imgModal">
+            <div class="modal2">
+                <button @click="imgModal = ''"></button>
+            </div>
+            <div class="modal3">
+                <img :alt="imgModalSrc" :src="imgModalSrc">
+            </div>
+        </div>
+    </div>        
+@endonce    
