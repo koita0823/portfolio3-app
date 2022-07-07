@@ -26,12 +26,14 @@
         <div class="modal1" @img-modal.window="imgModal = true; imgModalSrc = $event.detail.imgModalSrc;"
             x-cloak 
             x-show="imgModal">
-            <div class="modal2">
-                <button @click="imgModal = ''"></button>
-            </div>
-            <div class="modal3">
-                <img :alt="imgModalSrc" :src="imgModalSrc">
-            </div>
+            <div class="modal2" @click.away="imgModal" =''">
+                <div class="modal3">
+                    <button @click="imgModal = ''"></button>
+                </div>
+                <div class="modal4">
+                    <img :alt="imgModalSrc" :src="imgModalSrc">
+                </div>
+            </div>    
         </div>
     </div>        
 @endonce    
