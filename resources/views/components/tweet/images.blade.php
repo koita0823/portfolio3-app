@@ -2,8 +2,9 @@
     'images' => []
 ])
 
-<link rel="stylesheet" href="{{ asset('css/images.css') }}"> 
-<link rel="stylesheet" href="/css/app.css">
+<link rel="stylesheet" href="{{ asset('css/images.css') }}">
+<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+<script src="{{ mix('js/app.js') }}"></script>
 @if(count($images) > 0)
 <div class="image" x-data="{}">
     <div class="image2">
