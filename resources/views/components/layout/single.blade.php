@@ -4,7 +4,7 @@
         <form method="post" action="{{ route('logout') }}">
             @csrf
             <div class="logout" style="display: flex; justify-content: flex-end; padding: 1rem;">
-                <button style="margin-top: 0.5rem; font-size: 0.875rem; color: #a0aec0;">ログアウト</button>
+                <button style="margin-top: 0.5rem; font-size: 1rem; color: #c05621;">ログアウト</button>
             </div>
         </form>
         @endauth
