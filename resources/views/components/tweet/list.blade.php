@@ -1,11 +1,11 @@
 @props([
     'tweets' => []
 ])
-<link rel="stylesheet" href="{{ asset('css/list.css') }}"> 
+
 <div class="list">
     <ul>
         @foreach($tweets as $tweet)
-            <li>
+            <li class="border-b last:border-b-0">
                 <div>    
                     <span>
                         {{ $tweet->user->name }}

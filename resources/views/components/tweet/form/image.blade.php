@@ -11,7 +11,7 @@
     </template>
 
     <template x-if="fields.length < 2">
-        <button type="button" @click="addField()">
+        <button type="button" @click="addField()" class="hover:bg-gray-600">
             <span>画像を追加</span>
         </button>
     </template>

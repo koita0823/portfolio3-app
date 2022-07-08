@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ asset('css/list.css') }}"> 
+<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 <x-layout>
     <x-layout.single>
         <h2 style="text-align: center; color: #dd6b20; font-size: 2.25rem; 
