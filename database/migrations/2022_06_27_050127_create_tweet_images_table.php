@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tweet_images', function (Blueprint $table) {
-            $table->foreignId('tweet_id')->references('id')->on('tweets')->cascadeOnDelete();
-            $table->foreignId('image_id')->references('id')->on('images')->cascadeOnDelete();
+            $table->foreignId('tweet_id')->constrained('tweets')->cascadeOnDelete();
+            $table->foreignId('image_id')->constrained('images')->cascadeOnDelete();
             $table->timestamps();
         });
     }

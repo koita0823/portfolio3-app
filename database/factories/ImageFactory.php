@@ -21,7 +21,7 @@ class ImageFactory extends Factory
             Storage::makeDirectory('public/images');
         }
         return [
-            'name' => $this->image(storage_path('app/public/images'),
+            'name' => $this->faker->image(storage_path('app/public/images'),
             640, 480, null, false)
         ];
     }

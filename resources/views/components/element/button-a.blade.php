@@ -2,19 +2,19 @@
     'href' => '',
     'theme' => 'primary',
     ])
+<link rel="stylesheet" href="{{ asset('css/button-a.css') }}"> 
+<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 @php 
     if(!function_exists('getThemeClassForButtonA')) {
         function getThemeClassForButtonA($theme) {
             return match ($theme) {
-                'primary' => 'color: #fff; background-color: #fc8181;',
-                'secondary' => 'color: #fff; background-color: #d69e2e;',
+                'primary' => 'text-white bg-blue-500 hover:bg-blue-600 focus:ring-blue-500',
+                'secondary' => 'text-white bg-red-500 hover:bg-red-600 focus:ring-red-500',
                 default => '',
             };
         }
     }
 @endphp
-<a href="{{ $href }}" style="display: inline-flex; justify-content: center;
-    padding-top: 0.5rem; padding-bottom: 0.5rem;padding-left: 1rem; padding-right: 1rem; 
-    font-size: 0.875rem; font-weight: 600; border-radius: 0.375rem; {{ getThemeClassForButtonA($theme) }} ">
-        {{ $slot}}
+<a href="{{ $href }}" class="focus:outline-none focus:ring-2 focus:ring-offset-2 
+    {{ getThemeClassForButtonA($theme) }} ">{{ $slot }}
 </a>    

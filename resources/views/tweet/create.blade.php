@@ -12,7 +12,7 @@
                     placeholder="どんなことがありましたか？出来事や感じたとこを書いてみましょう。">
                 </textarea>
             </div> 
-            <x-tweet.form.image></x-tweet.form.image>
+            <input type="file" name="image[]">
 
             @error('tweet')
             <p>{{ $message }}</p>
