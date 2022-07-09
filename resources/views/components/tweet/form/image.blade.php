@@ -42,6 +42,9 @@
                     id: 'input-image-${i}'
                 });
             },
+            removeField(index) {
+                this.fields.splice(index, 1);
+            }
         }
     }
 </script>
