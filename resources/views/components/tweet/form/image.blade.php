@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/image.css') }}">
+<script src="{{ mix('js/app.js') }}"></script>
 
 <div class="imageForm" x-data="inputFormHandler()">
     <template x-for"(field, i) in fields" :key="i">
