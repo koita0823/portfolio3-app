@@ -22,6 +22,9 @@ Route::get('/mypage', function() {
 Route::get('/create', function() {
     return view('tweet.create');
 });
+Route::get('/timeline', function() {
+    return view('tweet.timeline');
+});
 Route::get('/mypage', \App\Http\Controllers\Tweet\MypageController::class)
 ->name('tweet.mypage');
 Route::post('/create', \App\Http\Controllers\Tweet\CreateController::class)

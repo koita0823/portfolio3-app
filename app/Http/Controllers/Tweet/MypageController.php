@@ -17,7 +17,7 @@ class MypageController extends Controller
     public function __invoke(Request $request, TweetService $tweetService)
     {
         $tweets = $tweetService->getTweets();
-        return view('tweet.mypage')
+        return view('tweet.timeline')
             ->with('tweets', $tweets);
     }
 }
