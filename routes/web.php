@@ -32,6 +32,8 @@ Route::post('/create', \App\Http\Controllers\Tweet\CreateController::class)
 ->name('tweet.create');
 Route::delete('/delete/{tweetId}', \App\Http\Controllers\Tweet\DeleteController::class)
 ->name('tweet.delete');
+Route::post('/timeline', \App\Http\Controllers\Tweet\MypageController::class)
+->name('tweet.timeline');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
