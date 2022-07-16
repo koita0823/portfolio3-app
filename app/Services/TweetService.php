@@ -15,6 +15,16 @@ class TweetService
         return Tweet::with('images')->orderBy('created_at', 'DESC')->get();
     }
 
+    public function checkOwnTweet(int $userId, int $tweetId): bool
+    {
+        $tweet = Tweet::where('id', $tweetId)->first();
+        if (!$tweet) {
+            return false;
+        }
+
+        return $tweet->user_id === $userId;
+    }
+
     public function saveTweet(int $userId, string $content, array $images) 
     {
         DB::transaction(function () use ($userId, $content, $images) {

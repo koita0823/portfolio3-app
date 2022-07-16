@@ -1,11 +1,12 @@
 <link rel="stylesheet" href="{{ asset('css/mypage.css') }}"> 
 <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 <x-layout>
+    <h1>マイページ</h1>
     <x-layout.single>
-        <h1>HOME</h1> 
         @auth  
             <a href="/create">
                 <x-element.button>投稿する</x-element.button>
+                <x-tweet.list :tweets="$tweets"></x-tweet.list>
             </a> 
         @endauth
     </x-layout.single> 

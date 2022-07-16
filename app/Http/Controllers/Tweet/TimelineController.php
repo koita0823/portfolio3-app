@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Services\TweetService;
 use Illuminate\Http\Request;
 
-class MypageController extends Controller
+class TimelineController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -17,7 +17,7 @@ class MypageController extends Controller
     public function __invoke(Request $request, TweetService $tweetService)
     {
         $tweets = $tweetService->getTweets();
-        return view('tweet.mypage')
+        return view('tweet.timeline')
             ->with('tweets', $tweets);
     }
 }

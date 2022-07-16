@@ -10,7 +10,7 @@
                     placeholder="どんなことがありましたか？出来事や感じたとこを書いてみましょう。">
                 </textarea>
             </div> 
-            <input type="file" name="image[]">
+            <input type="file" accept="image/*" name="images[]">
 
             @error('tweet')
                 <p>{{ $message }}</p>
