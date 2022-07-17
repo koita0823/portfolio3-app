@@ -3,11 +3,15 @@
 ])
 
 @if(count($images) > 0)
-    <div>
-        @foreach($images as $image) 
-            @if(file_exists(public_path().'/storage/images/'. $image->name))            
-                <img src="{{ asset('storage/images/'.$image->name) }}"> 
-            @endif      
+    <div class="image1">
+        @foreach($images as $image)
+            <div class="image2"> 
+                <div class="image3">
+                    @if(file_exists(public_path().'/storage/images/'. $image->name))            
+                        <img src="{{ asset('storage/images/'.$image->name) }}"> 
+                    @endif
+                </div> 
+            </div>             
         @endforeach
     </div>     
 @endif
